@@ -11,9 +11,11 @@
          (* n (recursion_fact (- n 1))))))
 
 (defun main()
-  (format t "~D~%" (tailcall_fact 100000))
+  (format t "~D~%" (tailcall_fact 1000))
   ;; below normal recursion expression is stack error.
   ;; (format t "~D~%" (recursion_fact 100000))
   )
 
+(compile 'tailcall_fact)
+(compile 'main)
 (main)
