@@ -7,11 +7,7 @@
 
 (in-package :cl-ltk)
 
-(defun tailcall_fact(n &optional (result 1))
-  (cond ((= n 1)
-         result)
-        ((/= n 1)
-         (tailcall_fact (- n 1) (* n result)))))
+(load "fact")
 
 (defvar *x* 10)
 (defvar *y* 0)
